@@ -9,8 +9,9 @@ type Account struct {
 	ID int
 	Name string
 	AccountType string  //admin vs seller vs buyer ... use const values
+	GiftCardsVal	float32
 	Addresses []Address
-	Payments []Pay	//list of all payment options
+	Payments []PayMethod	//list of all payment options
 	Ordered		//embedded type to inherient
 
 }
@@ -32,34 +33,33 @@ type Track struct {
 	Current string  //current location
 }
 
-////
-type Pay struct {
-	ID int
-	Num int
-
-
-}
-
-type Payment interface {
-	Verify()
-}
-
-/*type Account struct {
+/* pay stuff */
+type PayMethod struct {
 	ID int
 	Name string
-	Balance float32
+	Num int
+	SecCode int
 	AccountType string
+	ExpDate string
+}
+
+type PaymentGateway interface {
+	Authorize(p PayMethod) int
+	Charge(authCode float32, auth int)
+}
+
+/*
+type Card struct{	//credit,debit
+	PayMethod
+	ExpDate string
+}
+
+
+type PayAcct struct {	//venmo,paypal,venmo
+	PayMethod
 }
 */
-type Card struct{
-	ID int
-	Name string
+/* order+track methods */
 
-}
-////
+/* payment methods */
 
-//gift card, paypal, card, other types of account,paytm, venmo
-
-//order tracking
-
-//previous orders
