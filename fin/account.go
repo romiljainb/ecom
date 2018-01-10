@@ -39,11 +39,13 @@ type Transaction struct {
 func (b* Bank) Authorize(p user.PayMethod) int{
 	AuthCode := 0
 
-
+	/* Implementaion coming */
 
 	return AuthCode
 }
 
-//transfer
-//withdraw
-//deposit
+/* methods TODO:
+transfer
+withdraw
+deposit
+*/
