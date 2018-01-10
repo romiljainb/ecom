@@ -21,14 +21,14 @@ func (s* shopCart) RemoveItem(i* Item){
 	s.RemoveItem(i)
 }
 
-func (s* shopCart) ShowItems(){ 	//current
+func (s* shopCart) ShowItems(){ 	//shows all current items in cart
 	for _, i := range s.Items{
 		i.DisplayItem()
 	}
 }
 
 func (s* shopCart) VerifyPayments(){   //call within checkout
-
+	/* TODO soon */
 }
 
 func (s* shopCart) Checkout(){
@@ -36,6 +36,8 @@ func (s* shopCart) Checkout(){
 	s.VerifyPayments()
 
 }
+
+/* Add catalog struct and functions for sellers to populate and for buyers to select from */
 
 
 
