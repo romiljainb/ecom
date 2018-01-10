@@ -92,10 +92,13 @@ func (r* Review) DisplayAllReplies(){
 	}
 }
 
+/* Other functions:
 
-// item spec compare
+item spec compare
 
-//chat systems
-//tracking items systems
-// search system
+chat systems
+tracking items systems
+search system
+
+*/
 
