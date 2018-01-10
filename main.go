@@ -16,7 +16,7 @@ func main() {
 	r4 := cart.Review{UserReview:"Silas", ID:4, Rating:2.5}
 	i1 := cart.Item{
 
-		Name:"No to FB",
+		Name:"No to FBS",
 		ItemIDNum:1,
 		UnitPrice:5,
 		Quantity:5,
@@ -24,7 +24,7 @@ func main() {
 		Reviews: []cart.Review{r1,r2,r3,r4},
 	}
 
-	r5 := cart.Review{User:"DaVinci", UserReview:"stupid idiot", ID:4, Rating:2.5}
+	r5 := cart.Review{User:"DaVinci", UserReview:"Bad review", ID:4, Rating:2.5}
 	r5.Replies = append(r5.Replies, r1)
 	r5.Replies = append(r5.Replies, r2)
 	r5.Replies = append(r5.Replies, r3)
